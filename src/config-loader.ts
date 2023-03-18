@@ -1,9 +1,9 @@
 import { ConfigLoaderBase } from './config-loader-base';
-import { LoadConfigHandleOption, LoaderConfigHandlerBase } from './load-handler-base';
+import { LoadConfigHandleOption, LoadConfigHandlerBase } from './load-handler-base';
 
 export class ConfigLoader extends ConfigLoaderBase {
     public constructor(
-        private m_LoadHandler: LoaderConfigHandlerBase,
+        private m_LoadHandler: LoadConfigHandlerBase,
     ) {
         super();
     }

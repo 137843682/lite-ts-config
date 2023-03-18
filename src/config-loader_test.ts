@@ -1,12 +1,12 @@
 import { Mock } from 'lite-ts-mock';
 
 import { ConfigLoader as Self } from './config-loader';
-import { LoaderConfigHandlerBase } from './load-handler-base';
+import { LoadConfigHandlerBase } from './load-handler-base';
 
 describe('src/config-loader.ts', () => {
     describe('.load<T>(typer: new () => T)', () => {
         it('ctor', async () => {
-            const mockLoadHandler = new Mock<LoaderConfigHandlerBase>;
+            const mockLoadHandler = new Mock<LoadConfigHandlerBase>;
             const self = new Self(mockLoadHandler.actual);
 
             mockLoadHandler.expected.handle({
@@ -19,7 +19,7 @@ describe('src/config-loader.ts', () => {
         });
 
         it('constructor', async () => {
-            const mockLoadHandler = new Mock<LoaderConfigHandlerBase>;
+            const mockLoadHandler = new Mock<LoadConfigHandlerBase>;
             const self = new Self(mockLoadHandler.actual);
 
             mockLoadHandler.expected.handle({

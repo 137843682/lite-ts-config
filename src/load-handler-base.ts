@@ -3,10 +3,10 @@ export type LoadConfigHandleOption = {
     res?: any;
 };
 
-export abstract class LoaderConfigHandlerBase {
-    protected next: LoaderConfigHandlerBase;
+export abstract class LoadConfigHandlerBase {
+    protected next: LoadConfigHandlerBase;
 
-    public setNext(next: LoaderConfigHandlerBase) {
+    public setNext(next: LoadConfigHandlerBase) {
         this.next = next;
         return next;
     }
