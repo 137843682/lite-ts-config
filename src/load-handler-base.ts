@@ -1,5 +1,6 @@
 export type LoadConfigHandleOption = {
     name: string;
+    areaNo?: number;
     res?: any;
 };
 

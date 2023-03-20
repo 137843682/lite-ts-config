@@ -8,9 +8,10 @@ export class ConfigLoader extends ConfigLoaderBase {
         super();
     }
 
-    public async load<T>(typer: new () => T) {
+    public async load<T>(typer: new () => T, areaNo = 0) {
         const opt: LoadConfigHandleOption = {
-            name: (typer as any).ctor ?? typer.name
+            name: (typer as any).ctor ?? typer.name,
+            areaNo: areaNo
         };
         await this.m_LoadHandler.handle(opt);
         return opt.res;
