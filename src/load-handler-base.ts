@@ -12,5 +12,5 @@ export abstract class ConfigLoadHandlerBase {
         return next;
     }
 
-    public abstract handle(opt: ConfigLoadHandlerContext): Promise<void>;
+    public abstract handle(ctx: ConfigLoadHandlerContext): Promise<void>;
 }
