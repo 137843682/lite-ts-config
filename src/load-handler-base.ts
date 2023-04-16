@@ -1,16 +1,16 @@
-export type LoadConfigHandleOption = {
+export type ConfigLoadHandlerContext = {
     name: string;
     areaNo?: number;
     res?: any;
 };
 
-export abstract class LoadConfigHandlerBase {
-    protected next: LoadConfigHandlerBase;
+export abstract class ConfigLoadHandlerBase {
+    protected next: ConfigLoadHandlerBase;
 
-    public setNext(next: LoadConfigHandlerBase) {
+    public setNext(next: ConfigLoadHandlerBase) {
         this.next = next;
         return next;
     }
 
-    public abstract handle(opt: LoadConfigHandleOption): Promise<void>;
+    public abstract handle(opt: ConfigLoadHandlerContext): Promise<void>;
 }
